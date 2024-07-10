@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escreva uma função que receba um array de números e retorne
+        um novo array contendo apenas os números pares.</title>
+</head>
+<body>
+
+    <p id="numeros_escolhidos"></p>
+    <p id="numeros_pares"></p>
+    
+    <script>
+//VAR PARA TEXTO
+
+        var textoNumeroEscolhido = document.getElementById('numeros_escolhidos');
+        var textoNumeroPar = document.getElementById('numeros_pares');
+        
+ 
+            
+//PERGUNTA AO USER QUANTOS NUMEROS ELE QUER
+            let quantidade = parseInt(prompt("Quantas vezes você quer inserir um número?"));
+
+//ARRAY PARA OS NUMEROS ESCOLHIDOS AO USUARIO
+//ARRAY NUMEROS PARES
+            var numerosEscolhidos = [];
+            var numerosPares = [];
+
+//lOOP PARA PEDIR AO USER OS NUMEROS DE ACORDO COM A QUANTIDADE PEDIDA
+            for (var i = 0; i < quantidade; i++) {
+                let numero = parseFloat(prompt(`Insira o número ${i + 1}:`));
+                numerosEscolhidos.push(numero);
+
+                //VERIFICANDO OS NUMEROS PARES
+                if (numero % 2 === 0) {
+                    numerosPares.push(numero);
+                }
+            }
+            
+//LEITURA DA ARRAY DOS NUMEROS ESCOLHIDOS E NUMEROS PARES
+            textoNumeroEscolhido.innerHTML = "Os numeros escolhidos foram " +  numerosEscolhidos;
+            textoNumeroPar.innerHTML = "Entre os numeros escolhidos, os pares sao: " + numerosPares;
+
+        
+    </script>
+</body>
+</html>

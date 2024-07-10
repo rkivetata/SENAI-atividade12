@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escreva uma função que receba um array e retorne um novo
+        array com os elementos na ordem inversa.</title>
+</head>
+<body>
+    
+    <p id="numeros_escolhidos"></p>
+    <p id="numerosInvertidos"></p>
+    
+    <script>
+        
+        var textoNumeroEscolhido = document.getElementById('numeros_escolhidos');
+        var textoNumeroInvertido = document.getElementById('numerosInvertidos');
+        
+ 
+            
+//PERGUNTA AO USER QUANTOS NUMEROS ELE QUER
+            let quantidade = parseInt(prompt("Quantas vezes você quer inserir um número?"));
+
+//ARRAY PARA OS NUMEROS ESCOLHIDOS AO USUARIO
+//ARRAY NUMEROS INVERTIDOS
+            var numerosEscolhidos = [];
+            var numerosInvertidos = [];
+
+//lOOP PARA PEDIR AO USER OS NUMEROS DE ACORDO COM A QUANTIDADE PEDIDA
+            for (var i = 0; i < quantidade; i++) {
+                let numero = parseFloat(prompt(`Insira o número ${i + 1}:`));
+                numerosEscolhidos.push(numero);
+            }
+
+            for (var i = numerosEscolhidos.length - 1; i>=0; i--){
+                numerosInvertidos.push(numerosEscolhidos[i]);
+            }
+            
+//LEITURA DA ARRAY DOS NUMEROS ESCOLHIDOS E NUMEROS INVERTIDOS
+            textoNumeroEscolhido.innerHTML = "Os numeros escolhidos foram: " +  numerosEscolhidos;
+            textoNumeroInvertido.innerHTML = "Os numeros escolhidos em ordem inversa ficam: " + numerosInvertidos;
+    </script>
+</body>
+</html>

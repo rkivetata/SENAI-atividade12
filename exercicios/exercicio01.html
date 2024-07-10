@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Função que recebe array de números e retorna a soma de todos.</title>
+</head>
+<body>
+    <h1>Somador de números</h1>
+    <input type="number" id="numero1" placeholder="adicone um número"> 
+        <br><br>
+    <input type="number" id="numero2" placeholder="adicone um número"> 
+        <br><br>
+    <input type="number" id="numero3" placeholder="adicone um número"> 
+        <br><br>
+    <input type="number" id="numero4" placeholder="adicone um número"> 
+        <br><br>
+    <input type="number" id="numero5" placeholder="adicone um número"> 
+        <br><br>
+
+    <button onclick="somar()">somar</button>
+        <br><br>
+
+    <p id="texto"></p>
+    <script>
+
+        function somar() {
+//ADICIONANDO OS VALORES DO INPUT EM VARIAVEIS
+
+            var somador = 0;
+            var texto = document.getElementById('texto');
+
+            var numero1 = parseInt(document.getElementById('numero1').value);
+            var numero2 = parseInt(document.getElementById('numero2').value);
+            var numero3 = parseInt(document.getElementById('numero3').value);
+            var numero4 = parseInt(document.getElementById('numero4').value);
+            var numero5 = parseInt(document.getElementById('numero5').value);
+
+
+            var numeros = []; //LISTA
+           
+            //ADCIONANDO OS VALORES NA LISTA
+            numeros.push(numero1, numero2, numero3, numero4, numero5); 
+            console.log(numeros);
+
+            //LAÇO 
+            for (var i = 0; i < numeros.length; i++) {
+               somador+=numeros[i];
+            } 
+            texto.innerHTML = somador;
+        }
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escreva uma função que receba dois arrays e retorne um novo
+        array que é a concatenação dos dois867</title>
+</head>
+<body>
+    <p id="arrayUm"></p>
+    <p id="arrayDois"></p>
+    <p id="arrayConcatenar"></p>
+    
+    <script>
+        
+        var textoArrayUm = document.getElementById('arrayUm');
+        var textoArrayDois = document.getElementById('arrayDois');
+        var textoArrayConcatenar = document.getElementById('arrayConcatenar');
+        
+ 
+            
+//PERGUNTA AO USER QUANTOS NUMEROS ELE QUER PARA A ARRAY 1
+            let quantidade1 = parseInt(prompt("Quantas vezes você quer inserir um objeto na array 1?"));
+
+
+//ARRAY UM
+//ARRAY DOIS
+            var arrayUm = [];
+            var arrayDois = [];
+            
+
+//lOOP PARA PEDIR AO USER OS NUMEROS DE ACORDO COM A QUANTIDADE PEDIDA - ARRAY 1
+            for (var i = 0; i < quantidade1; i++) {
+                let numero = parseFloat(prompt(`Insira o número ${i + 1}:`));
+                arrayUm.push(numero);
+            }
+//PERGUNTA AO USER QUANTOS NUMEROS ELE QUER PARA A ARRAY 2
+            let quantidade2 = parseInt(prompt("Quantas vezes você quer inserir um objeto na array 2?"));
+
+            for (var i = 0; i < quantidade2; i++) {
+                let numero = parseFloat(prompt(`Insira o número ${i + 1}:`));
+                arrayDois.push(numero);
+            }
+
+            //ARRAY PARA CONCATENAR
+            var arrayConcatenada = arrayUm.concat(arrayDois);
+            
+//LEITURA DA ARRAY 1, ARRAY 2 E ARRAY CONCATENADA
+            textoArrayUm.innerHTML = "Os numeros escolhidos para a  primeira array foram: " +  arrayUm;
+            textoArrayDois.innerHTML = "Os numeros escolhidos para a segunda array foram: " + arrayDois;
+            textoArrayConcatenar.innerHTML = "Os valores de ambas arrays concatenados ficam: " + arrayConcatenada ;
+    </script>
+</body>
+</html>
